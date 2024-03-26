@@ -7,15 +7,14 @@ import axios from 'axios';
 import PropertyList from '../componants/propertyListing/PropertyList';
 import PropertySearch from '../componants/propertyListing/PropertySearch';
 import Sidebar from '../componants/Sidebar';
-import Nav from "../componants/Nav"
-import { GiToken } from 'react-icons/gi';
+import Nav from "../componants/Nav";
 import { PropertyContext } from '../componants/Add_property/ContextProvider';
 
 
 
 const HomePage = () => {
 
-const {SetIsEdit,SetBasicDetail,SetPropertyDetail,SetGeneral_info,SetLocation_info,SetAddProperty,SetPageNav} = useContext(PropertyContext);
+const {SetIsEdit,SetBasicDetail,SetPropertyDetail,SetGeneral_info,SetLocation_info,SetPageNav} = useContext(PropertyContext);
 useEffect(()=>{
 
   SetBasicDetail(
@@ -130,7 +129,7 @@ useEffect(()=>{
     };
     // console.log(token, id);
     setSearchFlag(true);
-    let url = `https://real-state-backend-6416.onrender.com/prop/v1/getproperty/${searchId}`;
+    let url = `http://localhost:8080/prop/v1/getproperty/${searchId}`;
     axios
       .get(url,{headers})
       .then((res) => {
@@ -145,12 +144,12 @@ useEffect(()=>{
   }
 
   function update(details) {
-    console.log(details._id);
+    // console.log(details._id);
     let data = { status: "Sold" };
     let token = localStorage.getItem("token");
     axios
         .patch(
-            `https://real-state-backend-6416.onrender.com/prop/v1/sold/${details._id}`,
+            `http://localhost:8080/prop/v1/sold/${details._id}`,
             data,
             {
                 headers: {
@@ -159,7 +158,7 @@ useEffect(()=>{
             }
         )
         .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setChange(false);
             setValues([res.data.data])
         })
@@ -193,6 +192,7 @@ useEffect(()=>{
                     boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
                     borderTopLeftRadius: "25px",
                     borderBottomLeftRadius: "25px",
+                    height: "41px"
                   }}
                   type="text"
                   className="form-control"
@@ -206,11 +206,12 @@ useEffect(()=>{
                 >
                   <span
                     style={{
-                      boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                      boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 19px",
                       cursor: "pointer",
                       borderTopRightRadius: "25px",
                       borderBottomRightRadius: "25px",
-                      padding: "20px"
+                      padding: "20px",
+                      height: "18px"
                     }}
                     className="input-group-text"
                     id="basic-addon2"
@@ -226,20 +227,23 @@ useEffect(()=>{
                 navigate("/addproperty/basic_detail")
                 SetIsEdit(false)
               }}
-              className="btn btn-info"
+              // className="btn btn-info"
               style={{
-                fontSize: "larger",
+                fontSize: "25px",
                 display: "flex",
                 backgroundColor:"#6AB4F8",
                 alignItems: "center",
                 boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.13)",
                 justifyContent: "center",
                 borderRadius: "35px",
-                border:"none"
+                border:"none",
+                paddingLeft:"60px",
+                paddingRight:"60px"
               }}
-            >
-
-              <span className="ms-1 d-none d-sm-inline">+ Add Property</span>
+             
+            >+ Add Property
+{/* 
+              <span className="ms-1 d-none d-sm-inline">+ Add Property</span> */}
             </button>
           </div>
           {searchFlag ? (

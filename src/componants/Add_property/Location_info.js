@@ -31,7 +31,7 @@ export default function Location() {
         Setloader(true);
         try {
 
-            let res = await axios.post("https://real-state-backend-6416.onrender.com/prop/v1/addproperty", data, {
+            let res = await axios.post("http://localhost:8080/prop/v1/addproperty", data, {
                 headers: {
                     "Authorization": token,
                     'Content-Type': 'multipart/form-data'

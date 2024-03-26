@@ -19,7 +19,7 @@ const PropertySearch = ({ values,update,change }) => {
     //   // const [change,setChange] = useState(details.status);
     //   axios
     //     .patch(
-    //       `https://real-state-backend-6416.onrender.com/prop/v1/sold/${details._id}`,
+    //       `http://localhost:8080/prop/v1/sold/${details._id}`,
           
     //       {
     //         headers: {
@@ -105,7 +105,7 @@ const PropertySearch = ({ values,update,change }) => {
                 onClick={() => setPathFlag(false)}
               >
 
-                <ImageView path={`https://real-state-backend-6416.onrender.com/${properties.image}`} />
+                <ImageView path={`http://localhost:8080/${properties.image}`} />
               </div>
             )}
         </>

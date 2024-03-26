@@ -23,7 +23,7 @@ export default function LocationEdit({ SetPage }) {
 
         Setloader(true)
         try {
-            const resp = await axios.put(`https://real-state-backend-6416.onrender.com/prop/v1/updateproperty/${id}`, newData, {
+            const resp = await axios.put(`http://localhost:8080/prop/v1/updateproperty/${id}`, newData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

@@ -24,13 +24,13 @@ function PropertyView() {
   const [change, setChange] = useState(true);
 
   function showImage(data) {
-      setPath(`https://real-state-backend-6416.onrender.com/${data.image}`);
+      setPath(`http://localhost:8080/${data.image}`);
       setPathFlag(true);
       // console.log(path);
       console.log(data.image);
   }
 
-  let url = `https://real-state-backend-6416.onrender.com/prop/v1/getproperty/${table.ppdid}`;
+  let url = `http://localhost:8080/prop/v1/getproperty/${table.ppdid}`;
   useEffect(() => {
       // let token = localStorage.getItem("token");
       // console.log(token);

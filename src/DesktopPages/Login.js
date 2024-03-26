@@ -21,7 +21,7 @@ const LogIn = () => {
     if (userid == "" || password == "") {
       alert("Email or paasword should not be empty")
     }
-    let url = "https://real-state-backend-6416.onrender.com/user/v1/login";
+    let url = "http://localhost:8080/user/v1/login";
     axios
       .post(url, {
         email: userid,

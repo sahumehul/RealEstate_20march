@@ -21,13 +21,13 @@ const PropertyList = () => {
 
 
     function showImage(data) {
-        setPath(`https://real-state-backend-6416.onrender.com/${data.image}`);
+        setPath(`http://localhost:8080/${data.image}`);
         setPathFlag(true);
         // console.log(path);
         console.log(data.image);
     }
 
-    let url = "https://real-state-backend-6416.onrender.com/prop/v1/getproperty";
+    let url = "http://localhost:8080/prop/v1/getproperty";
     useEffect(() => {
         // let token = localStorage.getItem("token");
         console.log(token);
@@ -63,7 +63,7 @@ const PropertyList = () => {
 
         axios
             .patch(
-                `https://real-state-backend-6416.onrender.com/prop/v1/sold/${details._id}`,
+                `http://localhost:8080/prop/v1/sold/${details._id}`,
                 data,
                 {
                     headers: {
