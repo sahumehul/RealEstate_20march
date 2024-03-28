@@ -65,15 +65,15 @@ export default function Location() {
 
     }
 
-    return <div className="router">
+    return <div className="container-fluid">
         {loader ? <Loader /> : <div>
-            <div className="Sidebar">
+            <div className="row flex-nowrap">
                 <Sidebar />
 
-            </div>
-            <div className="second_wrapper">
-                <div className="Nav"><Nav /></div>
-                <div>
+            
+                <div className="col container" style={{ maxWidth: "80%" }}>
+                <Nav />
+                <div className="form-section">
                     <PageIndicator />
 
                     <form className="outer_form" onSubmit={(event) => {
@@ -174,6 +174,7 @@ export default function Location() {
                     </form>
                 </div>
             </div>
+        </div>
         </div>}
     </div>
 } 

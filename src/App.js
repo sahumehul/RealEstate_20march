@@ -3,7 +3,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from "./DesktopPages/Home";
-import SideBar from "./componants/Sidebar";
 import LogIn from './DesktopPages/Login';
 import PropertyView from './DesktopPages/PropertyView';
 import { ContextFunction } from './componants/Add_property/ContextProvider';
@@ -16,7 +15,6 @@ import Edit from './EditProperty.js/Edit';
 
 import SignUp from './DesktopPages/Signup';
 import './componants/Add_property/Addproperty.css'
-import Editproperty from './DesktopPages/Editproperty';
 import ImageView from './componants/propertyListing/ImageView';
 
 

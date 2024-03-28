@@ -50,14 +50,14 @@ export default function LocationEdit({ SetPage }) {
     }
 
 
-    return <div className="router">
-        {loader ? <Loader /> : <div>
+    return <div className="container-fluid">
+    {loader ? <Loader /> : <div>
+        <div className="row flex-nowrap">
+            <Sidebar />
 
-            <div className="Sidebar"> <Sidebar />
-
-            </div>
-            <div className="second_wrapper">
-                <div className="Nav"><Nav /></div>
+        
+            <div className="col container" style={{ maxWidth: "80%" }}>
+            <Nav />
                 <div>
                     <PageIndicator />
                     <form className="outer_form" onSubmit={(event) => {
@@ -186,6 +186,7 @@ export default function LocationEdit({ SetPage }) {
                     </form>
                 </div>
             </div>
+        </div>
         </div>
         }
     </div>

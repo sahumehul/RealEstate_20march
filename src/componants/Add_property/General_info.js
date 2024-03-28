@@ -26,13 +26,14 @@ export default function General_info() {
             ...General_info
         })
     }
-    return <div className="router">
-        <div className="Sidebar"> <Sidebar />
+    return <div className="container-fluid">
 
-        </div>
-        <div className="second_wrapper">
-            <div className="Nav"><Nav /></div>
-            <div>
+    <div className="row flex-nowrap"> <Sidebar />
+
+
+    <div className="col container" style={{ maxWidth: "80%" }}>
+                <Nav />
+            <div className="form-section">
 
                 <PageIndicator />
                 <form className="outer_form" >
@@ -136,5 +137,6 @@ export default function General_info() {
                 </form>
             </div>
         </div>
+    </div>
     </div>
 }

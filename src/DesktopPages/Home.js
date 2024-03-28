@@ -111,15 +111,14 @@ useEffect(()=>{
     });
     
   }
-  // let token = localStorage.getItem("token");
-  // let id = localStorage.getItem("userID");
+  
   const navigate = useNavigate();
   const [searchId, setSearchId] = useState("");
   const [searchFlag, setSearchFlag] = useState(false);
   const [values, setValues] = useState([]);
   const [change, setChange] = useState(true);
   useEffect(() => {
-    // console.log(values.data);
+  
   }, [values]);
 
   function searchingById() {
@@ -127,7 +126,7 @@ useEffect(()=>{
     const headers = {
       Authorization: token
     };
-    // console.log(token, id);
+
     setSearchFlag(true);
     let url = `http://localhost:8080/prop/v1/getproperty/${searchId}`;
     axios
@@ -144,7 +143,6 @@ useEffect(()=>{
   }
 
   function update(details) {
-    // console.log(details._id);
     let data = { status: "Sold" };
     let token = localStorage.getItem("token");
     axios
@@ -158,7 +156,6 @@ useEffect(()=>{
             }
         )
         .then((res) => {
-            // console.log(res.data);
             setChange(false);
             setValues([res.data.data])
         })
@@ -242,8 +239,6 @@ useEffect(()=>{
               }}
              
             >+ Add Property
-{/* 
-              <span className="ms-1 d-none d-sm-inline">+ Add Property</span> */}
             </button>
           </div>
           {searchFlag ? (

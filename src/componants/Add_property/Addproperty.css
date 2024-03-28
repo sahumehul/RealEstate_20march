@@ -202,7 +202,7 @@ transmitting data to backend and waiting for response*/
 }
 
 /*Setting index for sidebar*/
-.Sidebar {
+/* .Sidebar {
 
     z-index: -1;
 }
@@ -212,7 +212,7 @@ transmitting data to backend and waiting for response*/
     position: relative;
     z-index: 3;
     top: -600px;
-}
+} */
 
 .blue {
     width: 187px;
@@ -228,8 +228,6 @@ transmitting data to backend and waiting for response*/
     font-weight: 600;
     line-height: normal;
     text-align: center;
-    /* border-top: none; */
-    /* top: 15px; */
     position: relative;
     padding-top: 15px;
 }

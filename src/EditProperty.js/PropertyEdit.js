@@ -11,12 +11,13 @@ export default function PropertyEdit({ SetPage }) {
     const { newData, SetnewData, SetPageNav,SetIsEdit } = useContext(PropertyContext)
 
 
-    return <div className="router">
-        <div className="Sidebar"> <Sidebar />
+    return <div className="container-fluid">
 
-        </div>
-        <div className="second_wrapper">
-            <div className="Nav"><Nav /></div>
+    <div className="row flex-nowrap"> <Sidebar />
+
+
+    <div className="col container" style={{ maxWidth: "80%" }}>
+                <Nav />
             <div>
                 <PageIndicator />
                 <form className="outer_form">
@@ -219,6 +220,7 @@ export default function PropertyEdit({ SetPage }) {
                     </div>
                 </form>
             </div>
+        </div>
         </div>
     </div>
 
