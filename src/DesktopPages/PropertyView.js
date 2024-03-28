@@ -59,7 +59,7 @@ function PropertyView() {
 
 
   return (
-    <div className="container" style={{ padding: "25px" }}>
+    <div className="container" style={{ padding: "25px",backgroundColor:"ButtonFace" }}>
       <div style={{ display: "flex" }}>
         <button
           type="button"
@@ -85,13 +85,7 @@ function PropertyView() {
         id="example"
         className="table   container table-info"
       >
-        <thead>
-          <tr>
-            <th colSpan="2">
-              <h3>{heading}</h3>
-            </th>
-          </tr>
-        </thead>
+       
        {
         data.map((tableDetails)=>(
           <tbody>
@@ -100,6 +94,13 @@ function PropertyView() {
               case 1:
                 return (
                   <>
+                  <thead>
+          <tr>
+            <th style={{backgroundColor:"ButtonFace"}}>
+              <h3>Basic detail</h3>
+            </th>
+          </tr>
+        </thead>
                     <tr>
                       <td>Property ID</td>
                       <td>{tableDetails.ppdid}</td>
@@ -141,6 +142,11 @@ function PropertyView() {
               case 2:
                 return (
                   <>
+                  <tr>
+            <th style={{backgroundColor:"ButtonFace"}}>
+              <h3>Properties information</h3>
+            </th>
+          </tr>
                     <tr>
                       <td>Length</td>
                       <td>{tableDetails.length}</td>
@@ -194,6 +200,11 @@ function PropertyView() {
               case 3:
                 return (
                   <>
+                  <tr>
+            <th style={{backgroundColor:"ButtonFace"}}>
+              <h3>General information</h3>
+            </th>
+          </tr>
                     <tr>
                       <td>Name</td>
                       <td>{tableDetails.owner_name}</td>
@@ -223,6 +234,11 @@ function PropertyView() {
               case 4:
                 return (
                   <>
+                  <tr>
+            <th style={{backgroundColor:"ButtonFace"}}>
+              <h3>Location Information</h3>
+            </th>
+          </tr>
                     <tr>
                       <td>Email</td>
                       <td>{tableDetails.email}</td>
