@@ -82,7 +82,7 @@ export default function General_info() {
                                 <div>
                                     <span id="bottom_icon" >
                                         <span id="top_icon" >
-                                            <IoCameraSharp size={50} />
+                                            <IoCameraSharp size={30} />
                                         </span>
                                     </span>
                                     <span>Add Photo</span>

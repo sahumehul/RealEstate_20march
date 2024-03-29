@@ -89,7 +89,7 @@ const PropertyList = () => {
                 <>
                     <table
                         className='table table-hover table-responsive-xl'
-                        style={{ marginTop: "15px" }}
+                        style={{ margin:"3%",marginLeft:"3%",width:"92%" }}
                     >
                         <thead style={{ color: "#4C57B6" }}>
                             <tr>
@@ -119,7 +119,7 @@ const PropertyList = () => {
                                         <th onClick={() =>update(properties)} scope='col'>
                                             <button style={{ backgroundColor: "#F5FAF5", color: "#416899", borderRadius: "5px", border: "1px solid rgb(228 233 233)" }} className="soldbtn">{properties.status}</button>
                                         </th>
-                                        <th style={{}} scope='col'>{properties.daysleft}</th>
+                                        <th  scope='col'>{properties.daysleft}</th>
                                         <th scope="col"
                                             style={{
                                                 display: "flex",

@@ -7,8 +7,8 @@ const Nav = () => {
   const userId = localStorage.getItem("userId");
   return (
     <>
-      <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: 'center', fontWeight: "400px", fontSize: "20px", color: "#bcbcbc", padding: "0 2.8rem", marginTop: "20px" }}>
-        <a href='/home'
+      <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: 'center', fontWeight: "400px", fontSize: "18px", color: "#bcbcbc", padding: "0 2.8rem", marginTop: "20px" }}>
+        <a 
           className='align-middle'>
           <p style={{ color: "#bcbcbc" }}
             className='mb-sm-auto mb-0 details '
@@ -19,14 +19,14 @@ const Nav = () => {
         <div className='nav-item'>
           <span
             className="nav-link align-middle px-0"
-            style={{ display: "flex", marginRight: "8%", }}
+            style={{ display: "flex" }}
           >
             <i className='fs-4 bi-house' >
               <div className='dropdown'>
                 
                 
                 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style={{fontSize:"14px"}}>
   <FaUserAlt />{name}
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">

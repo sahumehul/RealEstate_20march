@@ -12,29 +12,6 @@ const PropertySearch = ({ values,update,change }) => {
   let id = localStorage.getItem("userId");
   const [pathFlag, setPathFlag] = useState(false);
   
-
-    // function update(details) {
-    //   console.log(details._id);
-      
-    //   // const [change,setChange] = useState(details.status);
-    //   axios
-    //     .patch(
-    //       `http://localhost:8080/prop/v1/sold/${details._id}`,
-          
-    //       {
-    //         headers: {
-    //           'Authorization' : token
-    //         },
-    //       }
-  
-    //     )
-    //     .then((res) => {
-    //       console.log(res.data);
-    //       // window.location.reload();
-    //     })
-    //     .catch((err) => alert("Unable to Update"));
-    // }
-  
   return (
     <>
       {values._id === "" ? (
@@ -46,7 +23,7 @@ const PropertySearch = ({ values,update,change }) => {
           <>
           <table
             className='table table-hover table-responsive-xl'
-            style={{ marginTop: "15px" }}
+            style={{ margin:"3%",marginLeft:"3%",width:"92%" }}
           >
             <thead style={{ color: "#4C57B6" }}>
               <tr>

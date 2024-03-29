@@ -173,7 +173,7 @@ useEffect(()=>{
               display: "flex",
               justifyContent: "space-between",
               height: "40px",
-              width: "100%",
+              width: "95%",
             }}
           >
             <div
@@ -189,6 +189,7 @@ useEffect(()=>{
                     boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
                     borderTopLeftRadius: "25px",
                     borderBottomLeftRadius: "25px",
+                    marginLeft:"15%",
                     height: "41px"
                   }}
                   type="text"
@@ -226,7 +227,7 @@ useEffect(()=>{
               }}
               // className="btn btn-info"
               style={{
-                fontSize: "25px",
+                fontSize: "18px",
                 display: "flex",
                 backgroundColor:"#6AB4F8",
                 alignItems: "center",
@@ -247,9 +248,9 @@ useEffect(()=>{
                 className='row'
                 style={{
                   display: "flex",
-                  marginTop: "15px",
+                  margin:"3%",marginLeft:"3.5%",width:"92%",
                   justifyContent: "flex-end",
-                  paddingRight: "35px",
+                  
                   
                 }}
               >
@@ -258,6 +259,7 @@ useEffect(()=>{
                   onClick={()=>clearData()}
                   className="btn btn-info"
                   style={{
+                    width:"100%",
                     fontSize: "larger",
                     display: "flex",
                     color: "white",
