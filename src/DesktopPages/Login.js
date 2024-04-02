@@ -3,7 +3,7 @@ import "../styles/Login.css";
 import logo from "../images/realstate.png"
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Loader from "../componants/Add_property/Loader"
+import Loader from "../componants/Add_property/Loader";
 
 
 
@@ -48,8 +48,9 @@ const LogIn = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#e1f9f4" }}>
+    <>
       {loader ? <Loader/> : 
+      <div style={{ backgroundColor: "#e1f9f4" }}>
       <div className="formdiv">
         <form
           onSubmit={(e) => onSubmit(e)}
@@ -120,8 +121,8 @@ const LogIn = () => {
           </span>
         </form>
       </div>
-       }
-    </div>
+      </div>}
+    </>
   );
 };
 

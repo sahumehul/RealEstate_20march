@@ -50,8 +50,9 @@ function SignUp() {
       });
   }
   return (
-    <div style={{ backgroundColor: "#e1f9f4" }}>
+    <>
       {loader ? <Loader /> :
+      <div style={{ backgroundColor: "#e1f9f4" }}>
         <div className="formdiv">
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -163,8 +164,9 @@ function SignUp() {
               <span style={{ color: "gray" }}>Already have an account?</span> <Link to="/">Sign in</Link>
             </span>
           </form>
+        </div>
         </div>}
-    </div>
+    </>
   );
 }
 

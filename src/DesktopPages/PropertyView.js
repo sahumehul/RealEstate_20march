@@ -59,7 +59,7 @@ function PropertyView() {
 
 
   return (
-    <div className="container" style={{ padding: "25px",backgroundColor:"ButtonFace" }}>
+    <div className="container" style={{ padding: "25px",backgroundColor:"ButtonFace",borderRadius:"25px",marginBottom:"20px" }}>
       <div style={{ display: "flex" }}>
         <button
           type="button"
