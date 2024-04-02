@@ -77,7 +77,7 @@ export default function GeneralEdit({ SetPage }) {
                                 <div>
                                     <span id="bottom_icon" >
                                         <span id="top_icon" >
-                                            <IoCameraSharp size={50} />
+                                            <IoCameraSharp size={30} style={{paddingLeft:"3px"}} />
                                         </span>
                                     </span>
                                     <span>Add Photo</span>
